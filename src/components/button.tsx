@@ -7,6 +7,7 @@ interface ButtonProps {
   bootstrapIcon?: string;
   justIcon?: boolean;
   iconCircle?: boolean;
+  disabled?: boolean;
 }
 
 export const Button = ({
@@ -16,6 +17,7 @@ export const Button = ({
   justIcon,
   iconCircle,
   color,
+  disabled,
 }: ButtonProps) => {
   const iconStyle = iconOn
     ? justIcon
@@ -26,7 +28,7 @@ export const Button = ({
     : '';
 
   return (
-    <button className={`button ${iconStyle} ${color}`}>
+    <button className={`button ${iconStyle} ${color}`} disabled={disabled}>
       {iconOn ? <i className={bootstrapIcon}></i> : ''}
       {iconOn ? (justIcon ? '' : label) : label}
     </button>

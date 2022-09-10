@@ -12,7 +12,8 @@
   align-items: center;
   justify-content: center;
   border: 2px solid;
-  border-radius: 4px;
+  border-radius: 6px;
+  margin-left: 0;
 
   i {
     box-sizing: border-box;
@@ -20,47 +21,18 @@
     line-height: 24px;
     margin-right: 4px;
   }
-}
-
-.default {
-  color: #ffffff;
-  background-color: #6e41e2;
 
   &:hover {
-    background-color: #5835b0;
-  }
-
-  &:active {
-    background-color: #472c8a;
-  }
-
-  &:focus {
-    background: #6e41e2;
-    border: 2px solid rgba(17, 17, 17, 0.48);
-  }
-
-  &:disabled,
-  &[disabled] {
-    background: #e3daf9;
-  }
-}
-
-.white {
-  color: #6e41e2;
-  background-color: #ffffff;
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.88);
+    cursor: pointer;
   }
 
   &:focus {
     border: 2px solid rgba(17, 17, 17, 0.48);
   }
+}
 
-  &:disabled,
-  &[disabled] {
-    background: rgba(255, 255, 255, 0.56);
-  }
+.flatButton {
+  border: 2px solid rgba(17, 17, 17, 0);
 }
 
 .justIcon {

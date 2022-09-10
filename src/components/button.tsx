@@ -1,8 +1,17 @@
-import '../styles/components/button.scss';
+import '../styles/components/buttons/button.scss';
+import '../styles/components/buttons/buttonSchemes.scss';
 
 interface ButtonProps {
   label: string;
-  color: 'default' | 'white';
+  schemeColor:
+    | 'primary'
+    | 'primaryWhite'
+    | 'secondary'
+    | 'secondaryWhite'
+    | 'secondaryDark'
+    | 'flat'
+    | 'flatWhite';
+  flatButton?: boolean;
   iconOn?: boolean;
   bootstrapIcon?: string;
   justIcon?: boolean;
@@ -12,11 +21,12 @@ interface ButtonProps {
 
 export const Button = ({
   label,
+  schemeColor,
+  flatButton,
   iconOn,
   bootstrapIcon,
   justIcon,
   iconCircle,
-  color,
   disabled,
 }: ButtonProps) => {
   const iconStyle = iconOn
@@ -28,7 +38,10 @@ export const Button = ({
     : '';
 
   return (
-    <button className={`button ${iconStyle} ${color}`} disabled={disabled}>
+    <button
+      className={`button ${iconStyle} ${schemeColor} ${flatButton ? 'flatButton' : ''}`}
+      disabled={disabled}
+    >
       {iconOn ? <i className={bootstrapIcon}></i> : ''}
       {iconOn ? (justIcon ? '' : label) : label}
     </button>

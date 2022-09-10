@@ -39,7 +39,8 @@ export const Button = ({
 
   return (
     <button
-      className={`button ${iconStyle} ${schemeColor} ${flatButton ? 'flatButton' : ''}`}
+      id='button'
+      className={`${iconStyle} ${schemeColor} ${flatButton ? 'flatButton' : ''}`}
       disabled={disabled}
     >
       {iconOn ? <i className={bootstrapIcon}></i> : ''}

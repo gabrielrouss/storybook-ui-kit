@@ -1,6 +1,6 @@
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css');
 
-.button {
+#button {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -29,22 +29,22 @@
   &:focus {
     border: 2px solid rgba(17, 17, 17, 0.48);
   }
-}
 
-.flatButton {
-  border: 2px solid rgba(17, 17, 17, 0);
-}
-
-.justIcon {
-  padding: 10px;
-
-  i {
-    margin: 0;
+  &.flatButton {
+    border: 2px solid rgba(17, 17, 17, 0);
   }
-}
 
-.circle {
-  padding: 10px;
+  &.justIcon {
+    padding: 10px;
 
-  border-radius: 100%;
+    i {
+      margin: 0;
+    }
+  }
+
+  &.circle {
+    padding: 10px;
+
+    border-radius: 100%;
+  }
 }
